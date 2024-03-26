@@ -1,0 +1,47 @@
+package jdbcapplicationEx2;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class ProductDao {
+
+
+	public int createproductTable() throws SQLException
+	{
+		Connection connection=null;
+		Statement statement=null;
+		int count=0;
+	try
+	{
+		//get the connection
+		connection=DbConnection.createconnection();
+		
+		//create the ps object
+		statement=connection.createStatement();
+		String q1="create table Product(proid number,proname varchar2(20),proprice number)";
+		count=statement.executeUpdate(q1);
+	}
+	catch(SQLException e)
+	{
+		e.printStackTrace();
+		
+	}
+	finally {
+		//before release connection  v he the connection present or not
+		
+		
+		if(connection!=null)
+			connection.close();
+		if(statement!=null)
+			statement.close();
+	}
+	return count;
+	}
+}
+
+	
+
+
+	
+

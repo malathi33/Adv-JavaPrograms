@@ -1,0 +1,23 @@
+package Com.Satya.Jdbc;
+
+public class Product1 {
+
+	private int proId;
+	private String proName;
+	private double proprice;
+	public Product1(int proId, String proName, double proprice) {
+		super();
+		this.proId = proId;
+		this.proName = proName;
+		this.proprice = proprice;
+		
+	}
+	@Override
+	public String toString() {
+		return "Product1 [proId=" + proId + ", proName=" + proName + ", proprice=" + proprice + ", getClass()="
+				+ getClass() + ", hashCode()=" + hashCode() + ", toString()=" + super.toString() + "]";
+	}
+	
+	
+	
+}

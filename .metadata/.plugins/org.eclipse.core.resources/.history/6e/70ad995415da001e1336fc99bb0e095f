@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Add Product </title>
+<!-- BootStrap CDN ink to Get the Support of BootStrap -->
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<!-- This is java script validation code location -->
+<script src="formvalidation.js"></script>
+</head>
+
+<body>
+		<div class ="Container mt-5 text-center">
+		    <h2 class="text-center font-italic mb-1">Sava Product
+		    Data..... </h2>
+		    <form method="post" action="./ProductServlet"  enctype="multipart/form-data" onsubmit="return validateForm()">
+		    
+		    
+				    <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proId"> Product ID:</label>
+					    <input  type="text" class="form-control-sm" id="proId"  name="proId" required>
+		            </div>
+		    
+		             <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proName"> Product Name:</label>
+					    <input  type="text" class="form-control-sm" id="proName"  name="proName" required>
+		            </div>
+		            
+		   			 <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proPrice"> Product Price:</label>
+					    <input  type="text" class="form-control-sm" id="proPrice"  name="proPrice" required>
+		            </div>
+		            
+		            <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proBrand"> Product Brand:</label>
+					    <input  type="text" class="form-control-sm" id="proBrand"  name="proBrand" required>
+		            </div>
+		            
+		            <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proMadeIn"> Product MadeIn:</label>
+					    <input  type="text" class="form-control-sm" id="proMadeIn"  name="proMadeIn" required>
+		            </div>
+		            
+		            <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proImage"> Product Image:</label>
+					    <input  type="file" class="form-control- file-sm" id="proImage"  name="proImage" accept="image/*" required>
+		            </div>
+		            
+		     
+		            <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proMfDate"> Product MfDate:</label>
+					    <input  type="date" class="form-control- file-sm" id="proMfDate"  name="proMfDate"  required>
+		            </div>
+		            
+		            <div class="form-group">
+					    <label class="font-italic font-weight-bold"
+					    for="proExDate"> Product ExDate:</label>
+					    <input  type="date" class="form-control- file-sm" id="proExDate"  name="proExDate"  required>
+		            </div>
+		            
+		     
+		            <div>
+					    <input  type="submit" class="btn btn-sucess"  	 value="Save Product">
+					    <a href="Productlist.jsp" class="btn btn-primary">list of Products</a>
+		            </div>
+		            
+		    </form>
+		    
+	     </div>
+	     
+		 	   
+</body>
+</html>           
+		    
+		            
+		    
+		            
+		    
+		    
+		   

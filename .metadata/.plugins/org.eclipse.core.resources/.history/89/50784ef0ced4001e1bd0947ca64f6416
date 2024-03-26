@@ -1,0 +1,14 @@
+package jdbcapplicationEx2;
+
+import java.sql.*;
+
+public class DataBaseClient {
+
+	public static void main(String[] args) throws SQLException {
+		 ProductDao productDao =new ProductDao();
+		
+			int res1=productDao.createproductTable();
+			System.out.println("Table created sucessfully"+res1);
+	}
+}
+			

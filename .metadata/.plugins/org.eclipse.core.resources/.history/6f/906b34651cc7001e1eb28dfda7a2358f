@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Calculator Application</title>
+</head>
+<body bgcolor="red">
+<h1> Calculator Application</h1>
+<form method="get" action ="./CalculatorSrvlet">
+
+<label>First Number</label>
+<input type="number" name="firstNumber" required/>
+<br><br>
+
+<label>Second Number</label>
+<input type="number" name="secondNumber" required/>
+<br><br>
+
+  <input tyer="submit"  value="+" name="operation">
+  
+  <input type="submit"  value="-" name="operation">
+  
+  <input tper="submit"  value="*" name="operation">
+  
+  <input type="submit"  value="/" name="operation">
+  
+  <input type="submit"  value="%" name="operation">
+  </form>
+</body>
+</html>

@@ -1,0 +1,19 @@
+package Com.Satya.Jdbc;
+
+public class DataBaseClient {
+
+	public static void main(String[] args) {
+		
+	EmployeeDao employeeDao =new EmployeeDao();
+	
+	int res1=employeeDao.save(new Employee (1001,"chinnu",116));
+	
+	System.out.println("Data inserted Successfully..."+res1);
+	
+	int res2=employeeDao.save(new Employee (1002,"ammu",1016));
+	
+	System.out.println("Data inserted failed..."+res1);
+
+	}
+
+}

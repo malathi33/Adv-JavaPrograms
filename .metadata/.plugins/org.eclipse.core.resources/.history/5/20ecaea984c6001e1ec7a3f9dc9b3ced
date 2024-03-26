@@ -1,0 +1,32 @@
+package Com.Satya.Servlets;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet("/employeeservlet")
+public class employeeservlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+    
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//get the request data
+		int employeeId =Integer.parseInt(request.getParameter("employeeId"));
+		String employeeName=request.getParameter("employeeName");
+		double employeeBasicsalary=Double.parseDouble(request.getParameter("employeeBasicsalary"));
+		
+		
+		//process the data
+		double HRA,DA,PF,Gross_Salary;
+		
+		
+		
+		
+		
+	}
+
+}

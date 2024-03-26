@@ -1,0 +1,8 @@
+package Com.Satya.Jdbc;
+
+public class Product1 {
+
+	private int proId;
+	private String proName;
+	private double proprice;
+}

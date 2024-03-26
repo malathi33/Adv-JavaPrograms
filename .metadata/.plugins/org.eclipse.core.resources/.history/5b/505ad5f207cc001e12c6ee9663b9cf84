@@ -1,0 +1,26 @@
+package Com.Satya.Jdbc;
+
+import java.sql.*;
+
+
+public class DbConnection {
+	//This method create the connection&return connection
+	public static Connection createConnection()
+	
+	{
+		Connection connection= null;
+	try 
+	{
+		Class.forName("Orle.jdbc.driver.OrcleDriver");
+		 connection = DriverManager.getConnection("jdbc:orcle:thin:@Localhost:1521:xe","ammu","967656");
+		
+	
+	}
+    catch(ClassNotFoundException   |   SQLException e )
+	{
+    	e.printStackTrace();
+	}
+	return connection;
+	}
+
+}

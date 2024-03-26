@@ -1,0 +1,19 @@
+package collections;
+
+public class Test {
+
+	public static void main(String[] args) {
+		//constructor injection the values
+		Employee employee=new Employee(111,"chinnu",116);
+		System.out.println(employee);
+		//setter are injection the values
+		Employee employee2=new Employee();
+		employee2.setEmpId(1001);;
+		employee2.setEmpName("chinnu");
+		employee2.getEmpSalary(116.07)
+				
+		
+
+	}
+
+}

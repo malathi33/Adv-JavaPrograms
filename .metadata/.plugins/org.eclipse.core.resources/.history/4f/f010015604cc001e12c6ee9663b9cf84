@@ -1,0 +1,32 @@
+package Com.Satya.Jdbc;
+
+
+
+public class EmployeeDao {
+
+private static final String PreparedStatement = null;
+
+public int sava(Employee emp) 
+{
+//Declare the Resoureses
+	Connection connection=null;
+	PreparedStatement preparedstament=null;
+	int count=0;
+	try
+	{
+		//Get the connection
+		connection=DbConnection .CreateConnection;
+		
+		//create the ps object 
+		PreparedStatement	= connection.("insert into emp values(?,?,?)");
+		
+		//read the data from emp object and set to parameter
+		PreparedStatement.SetInt(1,emp.getEmpId());
+		PreparedStatement.SetString(2,emp.getEmpName());
+		PreparedStatement.SetDouble(3,emp.getEmpSalary());
+		Count=PreparedStatement.executeupdate();
+}
+	catch(SQLException e)
+	{
+		e.PrintStackTrace();
+	}

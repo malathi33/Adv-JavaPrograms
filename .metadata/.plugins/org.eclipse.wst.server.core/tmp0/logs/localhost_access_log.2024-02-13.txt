@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [13/Feb/2024:00:00:40 +0530] "GET /RegistationApplication2/RegisterFormServlet?username=chinnu&password=1234&mobile=9676565403&email=chinnu%40123gmail.com&Gender=male&dob=2003-04-10&qualification=B.Tech&country=INDIA&language=TELUGU&comments=vinjamur HTTP/1.1" 200 356

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Bill Application</title>
+
+</head>
+<body bgcolor="skyblue">
+<h1> Product Bill Application </h1>
+<form method ="get" action="./ProductServlet">
+<label>Product Id</label>
+<input type="number" name="proId" placeholder="productId" required/>
+
+<br><br>
+
+<label>Product Name</label>
+<input type="text" name="proName" placeholder="productName" required/>
+
+<br><br>
+
+<label>ProductPrice </label>
+<input type="number" name="proPrice" placeholder="productPrice" required/>
+
+<br><br>
+
+<label>ProductQuantity </label>
+<input type="number" name="proQuantity" placeholder="proQty" min="2" max="15" required/>
+
+
+<br><br>
+<input type="submit" value="ProductInvoice">
+</form>
+</body>
+</html>
+

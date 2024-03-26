@@ -1,0 +1,59 @@
+package Com.Satya.Jdbc;
+
+public int save(Employee emp) throws ClassNotFoundException,SQLException {
+	  //Declare the resources
+	  Connection connection=null;
+	  PreparedStatement preparedStatement=null;
+	  int count=0;
+	  try {
+		  //Get the connection
+		  connection =DbConnection.createconnection();
+		  
+		  //create the Ps Object
+		  preparedStatement =connection.prepareStatement("insert into emp values(?,?,?)");
+		  
+		  //read the data from emp object and set to parameters
+		  preparedStatement.setInt(1,emp.getEmpId());
+		  preparedStatement.setString(2,emp.getEmpName());
+		  preparedStatement.setDouble(3,emp.getEmpSalary());
+		  count=preparedStatement.executeUpdate();
+		   
+	  }
+	  catch(SQLException e) {
+		  e.printStackTrace();
+		  
+	  }
+	  finally {
+		  //before release connection check the connection present or not
+		  if(preparedStatement!=null)
+			  preparedStatement.close();
+		  if(connection!=null)
+			  connection.close();
+	  
+	return count;
+}
+public Employee findById(int  empId) throws SQLException
+{
+	Employee employee=null;
+	
+	try(Connection connection=DbConnection.createconnection();
+			PreparedStatement preparedStatement=connection.prepareStatement("select * from emp where empId=?"))
+	{
+		preparedStatement.setInt(1,empId);
+		ResultSet resultSet=preparedStatement.executeQuery();
+		if(resultSet.next())
+		{
+			employee=new Employee();
+			employee.setEmpId(resultSet.getInt(1));
+			employee.setEmpName(resultSet.getString(2));
+			employee.setEmpSalary(resultSet.getDouble(3));
+		}
+	}
+	catch(SQLException e) {
+		e.printStackTrace();
+		}
+	return employee;
+	}
+	
+
+}

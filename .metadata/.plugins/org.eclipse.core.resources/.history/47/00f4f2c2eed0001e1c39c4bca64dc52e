@@ -1,0 +1,47 @@
+package Com.Satya.Jdbc;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class Product1Dao {
+	public int save(Product1 p) throws ClassNotFoundException, SQLException {
+
+	
+		 //Declare the resources
+		
+		  Connection connection=null;
+		  PreparedStatement preparedStatement=null;
+		  int count=0;
+		  
+		  try {
+			  //Get the connection
+			  connection =DbConnection.createconnection();
+			  
+			  //create the Ps Object
+			  preparedStatement =connection.prepareStatement("insert into p values(?,?,?)");
+			  
+			  //read the data from pro object and set to parameters
+			  preparedStatement.setInt(1,p.getpId());
+			  preparedStatement.setString(2,p.getpName());
+			  preparedStatement.setDouble(3,p.getPprice());
+			  count=preparedStatement.executeUpdate();
+			   
+		  }
+		  catch(SQLException e) {
+			  e.printStackTrace();
+			  
+		  }
+		  finally {
+			  //before release connection check the connection present or not
+			  if(preparedStatement!=null)
+				  preparedStatement.close();
+			  if(connection!=null)
+				  connection.close();
+		  } 
+		  return count;
+		
+	}
+	}
+
+
